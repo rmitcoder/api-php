@@ -73,15 +73,15 @@ use \Psr\Http\Message\ResponseInterface as Response;
         $input = $request->getUploadedFiles();
         foreach ($input['docs[]'] as $doc) {
             echo "<pre>";
-            echo $doc->getClientFilename();
+            var_dump($doc->getClientFilename()) ;
             echo "</br>";
-            echo $doc->getClientMediaType();
+            //echo $doc->getClientMediaType();
             echo "</br>";
-            echo "Size of File is :".$doc->getSize()." bytes";
+         //   echo "Size of File is :".$doc->getSize()." bytes";
             echo "</pre>";
-            return $doc->getClientFilename();
+            return json_encode($doc->getClientFilename()) ;
         }
-        return json_encode($input);
+//        return json_encode($input);
 
 
     }
