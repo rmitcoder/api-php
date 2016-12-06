@@ -71,18 +71,22 @@ use \Psr\Http\Message\ResponseInterface as Response;
         $order_time = time();
 
         $input = $request->getUploadedFiles();
-        foreach ($input['docs[]'] as $doc) {
-            echo "<pre>";
-            var_dump($doc->getClientFilename()) ;
-            echo "</br>";
-            //echo $doc->getClientMediaType();
-            echo "</br>";
-         //   echo "Size of File is :".$doc->getSize()." bytes";
-            echo "</pre>";
-            return json_encode($doc->getClientFilename()) ;
-        }
-//        return json_encode($input);
-
+//        foreach ($input['docs[]'] as $doc) {
+//            echo "<pre>";
+//            var_dump($doc->getClientFilename()) ;
+//            echo "</br>";
+//            //echo $doc->getClientMediaType();
+//            echo "</br>";
+//         //   echo "Size of File is :".$doc->getSize()." bytes";
+//            echo "</pre>";
+//            return json_encode($doc->getClientFilename()) ;
+//        }
+        return json_encode($input);
+        //insert
+        // mailTo(costa,obj){
+        //  docs;
+         //   username;
+        //}
 
     }
 
